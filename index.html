@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhateverIwant</title>
+</head>
+
+<body>
+    <h1> BMI-calculator </h1>
+    <p> Don't really wanna check weight (kg) </p>
+    <input type="number" class="inputWeight" max="500" />
+    <p> Height (m) </p>
+    <input type="number" class="inputHeight" max="2" />
+    <button onclick="calculateBmi()"> Calculate now! </button>
+    <p class="calculateBmi"></p>
+</body>
+<script>
+
+    function calculateBmi() {
+        const weight = document.querySelector(".inputWeight").value;
+        const height = document.querySelector(".inputHeight").value;
+        const bmi = weight / (height * height);
+        document.querySelector(".calculateBmi").innerText = bmi;
+    }
+</script>
+
+</html>
